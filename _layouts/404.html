@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page does not exist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    {% if page.url == "/404.html" %}
+    <meta http-equiv="refresh" content="5; url=/">
+    {% endif %}
+</head>
+<body>
+<center>
+<div class="glitch headline" data-trick="404">
+    </div>
+</body>
+</html>
+
+
+

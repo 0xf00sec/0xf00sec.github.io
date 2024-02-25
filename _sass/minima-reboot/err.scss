@@ -1,0 +1,193 @@
+@font-face {
+    font-family:"mono45-headline";
+    src:url("https://use.typekit.net/af/ec133b/00000000000000003b9afa2a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/ec133b/00000000000000003b9afa2a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/ec133b/00000000000000003b9afa2a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:500;
+    }
+
+    body {
+        background-color: white;
+        overflow-x: hidden;    
+    }
+
+    ::selection {
+        background: black;
+    }
+    
+    #videocontainer {
+        position: relative;
+        height: 0px;
+        transform: translateZ(-1);
+    }
+    
+    #bgvid {
+        position: fixed;
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    
+    .red {
+        color: red;
+    }
+    
+    .black {
+        color: black;
+    }
+    
+    .white {
+        color: white;
+    }
+    
+    .bg1 {
+        background-color: rgb(30, 30, 30);
+    }
+    
+    .bg2 {
+        background-color: black;
+    }
+    
+    .ascii {
+        position: relative;
+        font-family: mono45-headline, monospace;
+         line-height: 0.9; 
+        width: 100%;
+        margin: auto;
+        color: white;
+        /*border: 1px solid red;*/
+    }
+
+    .skull {
+        width: 35%;
+        margin: auto;
+      }
+    
+    ::selection {
+        color: black;
+        background: white;
+    }
+    
+    .headwrap {
+        margin: 5% 0;
+        text-align: center;
+    }
+    
+    .headline {
+        display: inline;
+        font-size: 7rem;
+        width: 40rem;
+    }
+    
+    .h1wrap {
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    .hline {
+        font-size: 3.5rem;
+        width: 20rem;
+        display: inline;
+    }
+    
+    .glitch {
+        color: red;
+        position: absolute;
+    }
+    
+    .glitch::after {
+        content: attr(data-trick);
+        top: 0;
+        position: absolute;
+        left: 0.5rem;
+        color: black;
+        overflow: hidden;
+        text-shadow: -0.5rem 0 red;
+        clip: rect(0, 90rem, 0, 0);
+        animation: noise 2s infinite linear alternate-reverse;
+    }
+
+    pre {
+        font-weight: normal;
+        border: 0px;
+        background: transparent;
+        font-size: 13px;
+        line-height: 13px;
+        font-family: monospace;
+      }
+      pre.sized {
+        max-width: 42em;
+      }
+    
+    .glitch::before {
+        content: attr(data-trick);
+        top: 0;
+        position: absolute;
+        left: -1rem;
+        color: white;
+        overflow: hidden;
+        text-shadow: 0.3rem 0 red;
+        clip: rect(0, 90rem, 0, 0);
+        animation: noise 4s infinite linear alternate-reverse;
+    }
+      
+      @-webkit-keyframes noise {
+        0% {    clip: rect(11rem, 99.99rem, 6rem, 0);
+        }  4% {    clip: rect(11rem, 99.99rem, 10rem, 0);
+        }  8% {    clip: rect(12rem, 99.99rem, 11rem, 0);
+        }  12% {    clip: rect(4rem, 99.99rem, 6rem, 0);
+        }  16% {    clip: rect(11rem, 99.99rem, 12rem, 0);
+        }  20% {    clip: rect(8rem, 99.99rem, 5rem, 0);
+        }  24% {    clip: rect(11rem, 99.99rem, 11rem, 0);
+        }  28% {    clip: rect(2rem, 99.99rem, 3rem, 0);
+        }  32% {    clip: rect(8rem, 99.99rem, 5rem, 0);
+        }  36% {    clip: rect(5rem, 99.99rem, 3rem, 0);
+        }  40% {    clip: rect(1rem, 99.99rem, 7rem, 0);
+        }  44% {    clip: rect(5rem, 99.99rem, 5rem, 0);
+        }  48% {    clip: rect(10rem, 99.99rem, 2rem, 0);
+        }  52% {    clip: rect(9rem, 99.99rem, 7rem, 0);
+        }  56% {    clip: rect(5rem, 99.99rem, 10rem, 0);
+        }  60% {    clip: rect(11rem, 99.99rem, 2rem, 0);
+        }  64% {    clip: rect(8rem, 99.99rem, 10rem, 0);
+        }  68% {    clip: rect(4rem, 99.99rem, 1rem, 0);
+        }  72% {    clip: rect(7rem, 99.99rem, 10rem, 0);
+        }  76% {    clip: rect(11rem, 99.99rem, 7rem, 0);
+        }  80% {    clip: rect(3rem, 99.99rem, 8rem, 0);
+        }  84% {    clip: rect(2rem, 99.99rem, 10rem, 0);
+        }  88% {    clip: rect(10rem, 99.99rem, 5rem, 0);
+        }  92% {    clip: rect(10rem, 99.99rem, 12rem, 0);
+        }  96% {    clip: rect(5rem, 99.99rem, 3rem, 0);
+        }  100% {    clip: rect(8rem, 99.99rem, 12rem, 0);
+        }
+      }
+      
+      @keyframes noise {
+        0% {    clip: rect(11rem, 99.99rem, 6rem, 0);
+        }  4% {    clip: rect(11rem, 99.99rem, 10rem, 0);
+        }  8% {    clip: rect(12rem, 99.99rem, 11rem, 0);
+        }  12% {    clip: rect(4rem, 99.99rem, 6rem, 0);
+        }  16% {    clip: rect(11rem, 99.99rem, 12rem, 0);
+        }  20% {    clip: rect(8rem, 99.99rem, 5rem, 0);
+        }  24% {    clip: rect(11rem, 99.99rem, 11rem, 0);
+        }  28% {    clip: rect(2rem, 99.99rem, 3rem, 0);
+        }  32% {    clip: rect(8rem, 99.99rem, 5rem, 0);
+        }  36% {    clip: rect(5rem, 99.99rem, 3rem, 0);
+        }  40% {    clip: rect(1rem, 99.99rem, 7rem, 0);
+        }  44% {    clip: rect(5rem, 99.99rem, 5rem, 0);
+        }  48% {    clip: rect(10rem, 99.99rem, 2rem, 0);
+        }  52% {    clip: rect(9rem, 99.99rem, 7rem, 0);
+        }  56% {    clip: rect(5rem, 99.99rem, 10rem, 0);
+        }  60% {    clip: rect(11rem, 99.99rem, 2rem, 0);
+        }  64% {    clip: rect(8rem, 99.99rem, 10rem, 0);
+        }  68% {    clip: rect(4rem, 99.99rem, 1rem, 0);
+        }  72% {    clip: rect(7rem, 99.99rem, 10rem, 0);
+        }  76% {    clip: rect(11rem, 99.99rem, 7rem, 0);
+        }  80% {    clip: rect(3rem, 99.99rem, 8rem, 0);
+        }  84% {    clip: rect(2rem, 99.99rem, 10rem, 0);
+        }  88% {    clip: rect(10rem, 99.99rem, 5rem, 0);
+        }  92% {    clip: rect(10rem, 99.99rem, 12rem, 0);
+        }  96% {    clip: rect(5rem, 99.99rem, 3rem, 0);
+        }  100% {    clip: rect(8rem, 99.99rem, 12rem, 0);
+        }
+      }
+    
+ 

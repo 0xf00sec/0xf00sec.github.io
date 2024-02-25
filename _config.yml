@@ -1,0 +1,22 @@
+title: Home
+author: "0xf00"
+description: >
+  Security blog focusing on malware development, reverse engineering, binary exploitation, Vulnerability Research, and other.
+
+minima_reboot:
+  date_format: "%b %-d, %Y"
+  date_format_short: "%b %-d"
+
+header_pages:
+- about.md
+- posts.md
+
+paginate: 5
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - README.md
+  - Gemfile.lock
+  - minima-reboot.gemspec
