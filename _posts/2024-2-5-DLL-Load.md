@@ -8,9 +8,11 @@ blog_post: true
 ---
 
 
-In this post we’ll focus on the theory of a technique known as DLL Proxying, I already have post cover [Malware Development Essentials for Operators](https://0xf00sec.github.io/2023/11/08/Malware-Dev-Op.html) going over some techniques and examples, Check it out, So What the hell is “DLL Proxying”,
+In this post, we'll focus on a technique known as DLL Proxying and explore its intricacies using rust lang, applications, and potential implications. So What the hell is “DLL Proxying”,
 
 DLL Proxying is a technique in which an attacker replaces a Dynamic Link Library (DLL) with a malicious version, opting to rename the original DLL rather than deleting it. The malicious DLL is designed to exclusively implement the functions targeted for interception or modification by the attacker. Meanwhile, all other functions are forwarded to the original DLL, earning the name “Proxy” for this approach. This method allows the attacker to essentially act as a middleman, intercepting and modifying only the specific functions of interest, while seamlessly forwarding the remaining functions to the original DLL. By doing so, the attacker minimizes the amount of effort required, ensuring that overall functionality is maintained without disruption. This technique is particularly effective for carrying out specific attacks while avoiding unnecessary complications or detection.
+
+
 # Overview
 
 Recently, I've been exploring Rust and its offensive capabilities. So I thought DLL-load proxying in Rust. However, before delving into the implementation, Let's discuss the potential effectiveness of DLL Proxy loading for malicious actors. Let's examine this example more closely.
