@@ -181,7 +181,7 @@ fn proxied_load_library(module_name: &str) -> Option<winapi::um::libloaderapi::H
 }
 ```
 
-Using `VirtualProtect` to set a page to `PAGE_GUARD` and induce a guard page violation serves as a subtle method for initiating the Vectored Exception Handler. This approach allows for the dynamic modification of memory protection, introducing an element of variability that makes the technique less static. By triggering the guard page violation, the implementation can seamlessly invoke the Vectored Exception Handler, enabling dynamic adjustments to memory protection settings and contributing to a stealthier execution of the injection technique. [Source Code 9](https://github.com/0xf00I/DLLProxying-rs)
+Using `VirtualProtect` to set a page to `PAGE_GUARD` and induce a guard page violation serves as a subtle method for initiating the Vectored Exception Handler. This approach allows for the dynamic modification of memory protection, introducing an element of variability that makes the technique less static. By triggering the guard page violation, the implementation can seamlessly invoke the Vectored Exception Handler, enabling dynamic adjustments to memory protection settings and contributing to a stealthier execution of the injection technique. [DLLProxying-rs](https://github.com/0xf00I/DLLProxying-rs)
 
 This was a simple implementation of Proxy-DLL-Loads in Rust, Thanks for reading and I hope you’ve learned something!
 # References
