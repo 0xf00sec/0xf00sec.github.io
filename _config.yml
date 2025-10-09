@@ -1,0 +1,14 @@
+description: "Vulnerabilities, Low-Level Analysis, RE & Malware Dev"
+permalink: /:slug 
+google_analytics: "G-DYC1XBCEBX"
+
+header_pages:
+  - index.md
+  - 0x00.md
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+kramdown:
+  input: GFM

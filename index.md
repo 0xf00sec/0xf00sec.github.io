@@ -1,0 +1,6 @@
+---
+title: /
+layout: home
+permalink: /
+---
+
