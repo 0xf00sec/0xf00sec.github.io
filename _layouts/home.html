@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{%- assign regular_posts = "" | split: "" -%}
+{%- for post in site.posts -%}
+  {%- assign is_challenge = false -%}
+  {%- if post.title contains '[ReverseMe]' or post.title contains '[PwnMe]' -%}
+    {%- assign is_challenge = true -%}
+  {%- endif -%}
+  {%- if post.tags contains 'ReME' -%}
+    {%- assign is_challenge = true -%}
+  {%- endif -%}
+  {%- if post.categories contains 'ReverseMe' or post.categories contains 'PwnMe' -%}
+    {%- assign is_challenge = true -%}
+  {%- endif -%}
+  {%- unless is_challenge -%}
+    {%- assign regular_posts = regular_posts | push: post -%}
+  {%- endunless -%}
+{%- endfor -%}
+
+{%- if regular_posts.size > 0 -%}
+  <ul class="post-list">
+    {%- for post in regular_posts -%}
+    <li>
+      {%- assign date_format = "%Y-%m-%d" -%}
+      <span class="post-date">{{ post.date | date: date_format }}</span>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

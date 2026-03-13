@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<article class="post-content">
+{{ content }}
+</article>
+
+<script>
+(function(){
+  var host = location.hostname;
+  var links = document.querySelectorAll('.post-content a[href]');
+  for (var i = 0; i < links.length; i++) {
+    var a = links[i];
+    var href = a.getAttribute('href');
+    if (/^(javascript|data|vbscript):/i.test(href)) {
+      a.removeAttribute('href');
+      a.style.pointerEvents = 'none';
+      continue;
+    }
+    try { var u = new URL(href, location.href); } catch(e) { continue; }
+    if (u.hostname && u.hostname !== host) {
+      a.setAttribute('rel', 'noopener noreferrer');
+      a.setAttribute('target', '_blank');
+      if (!a.querySelector('code')) a.classList.add('external-link');
+    }
+  }
+})();
+</script>

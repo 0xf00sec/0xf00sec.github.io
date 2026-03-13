@@ -1,0 +1,21 @@
+:root {
+  --base-color: rgba(0,255,65,0.7);
+  --background-color: #060606;
+  --text-color: var(--base-color);
+  --link-color: rgba(0,255,65,0.5);
+  --accent-color: rgba(0,255,65,0.9);
+  --muted-color: rgba(0,255,65,0.3);
+  --surface-color: rgba(0,255,65,0.02);
+  --border-subtle: rgba(0,255,65,0.06);
+  --border-strong: rgba(0,255,65,0.15);
+  --selection-background: rgba(0,255,65,0.2);
+  --selection-text: #000;
+  --placeholder-color: rgba(0,255,65,0.2);
+  --code-color-1: rgba(0,255,65,0.4); --code-color-2: #ffffcc;
+  --code-color-3: #ff3333; --code-color-4: rgba(255,51,51,0.1);
+  --code-color-5: #b38aff; --code-color-6: #00ff41; --code-color-7: #e4e477;
+  --code-color-8: #00aa44; --code-color-9: #00ff41; --code-color-10: rgba(0,255,65,0.35);
+  --code-color-11: rgba(0,255,65,0.25); --code-color-12: #cc66ff;
+  --code-color-13: #00d4d4; --code-color-14: #00c1c1; --code-color-15: #ffcc00;
+  --code-color-16: #00ccff; --code-color-17: #ff6666; --code-color-18: rgba(0,255,65,0.6);
+}

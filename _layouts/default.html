@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+
+  {%- include head.html -%}
+
+  <body>
+    {% if page.layout == 'post' %}
+    <div class="progress-bar" id="progressBar"></div>
+    {% endif %}
+
+    <div class="container{% if page.wide %} wide{% endif %}">
+
+      {%- include header.html -%}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">^ top</button>
+
+    <script>
+    (function() {
+      var btn = document.getElementById('backToTop');
+      if (btn) {
+        window.addEventListener('scroll', function() {
+          btn.classList.toggle('visible', window.scrollY > 400);
+        });
+        btn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      var bar = document.getElementById('progressBar');
+      if (bar) {
+        window.addEventListener('scroll', function() {
+          var h = document.documentElement;
+          bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100 + '%';
+        });
+      }
+    })();
+    </script>
+  </body>
+</html>
