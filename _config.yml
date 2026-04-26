@@ -8,6 +8,7 @@ header_pages:
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 highlighter: rouge
 markdown: kramdown
