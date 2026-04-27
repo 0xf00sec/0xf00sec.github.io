@@ -1,5 +1,5 @@
 ---
-title: /
+title: f00crew
 layout: home
 permalink: /
 ---
