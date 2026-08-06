@@ -1,0 +1,30 @@
+title: f00crew
+index_title: "f00crew :: vx/re"
+description: "vx/re"
+url: "https://f00crew.org"
+baseurl: ""
+permalink: /:slug
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+  math_engine: null
+  smart_quotes:
+    - apos
+    - apos
+    - quot
+    - quot
+  typographic_symbols:
+    hellip: "..."
+    mdash: "---"
+    ndash: "--"
+    laquo: "<<"
+    raquo: ">>"
+    laquo_space: "<< "
+    raquo_space: " >>"

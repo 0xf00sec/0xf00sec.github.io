@@ -1,0 +1,5 @@
+{% unless page.url == '/' %}
+<footer>
+  <a href="{{ '/' | relative_url }}">index</a>{% unless page.url == '/404.html' %}<span> / </span><a href="https://github.com/0xf00sec">source</a>{% if page.slug == '0x12' or page.slug == '0x15' %}<span> / </span><a href="https://vx-underground.org">mirror</a>{% endif %}{% endunless %}
+</footer>
+{% endunless %}
